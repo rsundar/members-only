@@ -1,1 +1,1 @@
-# private-events
+# members-only
