@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
     
-    def index
-        render "index"
-    end
+    validates :title, presence: true
+    validates :body, presence: true
 end
