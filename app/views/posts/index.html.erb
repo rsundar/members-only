@@ -17,7 +17,7 @@
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <% if user_signed_in? %>
-          <td><%= post.user_id %></td>
+          <td><%= post.user.name %></td>
         <% end %>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
