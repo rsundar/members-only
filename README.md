@@ -86,4 +86,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://www.github.com/mariobarrioss/tree/development/LICENSE) licensed.
+This project is [MIT](https://github.com/rsundar/members-only/tree/devise/LICENSE) licensed.
