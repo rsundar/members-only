@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :require_permission, only: [:edit, :destroy]
-
+  before_action :requires_sign_in, only: [:new, :create]
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -77,6 +78,13 @@ class PostsController < ApplicationController
     def require_permission
       if current_user != Post.find(params[:id]).user
         flash[:alert] = 'You are not allowed to perform this operation!'
+        redirect_to root_path
+      end
+    end
+
+    def requires_sign_in
+      if !user_signed_in?
+        flash[:notice] = "Please sign in or sign up to create a new post"
         redirect_to root_path
       end
     end
