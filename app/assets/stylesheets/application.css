@@ -15,5 +15,10 @@
  */
 .alert {
     color: red;
-    font-style: bold;
+    font-weight: bolder;
+}
+
+.notice {
+    color: green;
+    font-weight: bolder;
 }
